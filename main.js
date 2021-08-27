@@ -43,7 +43,6 @@ function renderPlaces(places) {
       `latitude: ${latitude}; longitude: ${longitude};`
     );
     model.setAttribute("gltf-model", "./assets/models/book3.gltf");
-    model.setAttribute("rotation", "0 180 0");
     model.setAttribute("animation-mixer", { timeScale: 0 });
     model.setAttribute("scale", "3 3 3");
     model.setAttribute("position", { x: 0, y: 30, z: 0 });
