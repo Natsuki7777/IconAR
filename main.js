@@ -23,8 +23,8 @@ function staticLoadPlaces() {
     {
       name: "book",
       location: {
-        lat: 35.606256862309124,
-        lng: 139.68403883325144,
+        lat: 35.6063020280467,
+        lng: 139.68402209020124,
       },
     },
   ];
