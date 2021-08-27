@@ -29,7 +29,7 @@ function staticLoadPlaces() {
     },
   ];
 }
-
+running = false;
 function renderPlaces(places) {
   let scene = document.querySelector("a-scene");
 
@@ -49,12 +49,12 @@ function renderPlaces(places) {
     model.setAttribute("link", `href:https://www.libra.titech.ac.jp/`);
 
     model.addEventListener("click", (e) => {
-      if (!this.running) {
+      if (!running) {
         model.setAttribute("animation-mixer", { timeScale: 1 });
       } else {
-        model.setAttribute("animation-mixer", { timeScale: 1 });
+        model.setAttribute("animation-mixer", { timeScale: 0 });
       }
-      this.running = !this.running; // flip the flag
+      running = !running; // flip the flag
     });
     model.addEventListener("loaded", () => {
       window.dispatchEvent(new CustomEvent("gps-entity-place-loaded"));
