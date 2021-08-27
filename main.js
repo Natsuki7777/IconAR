@@ -45,7 +45,7 @@ function renderPlaces(places) {
     model.setAttribute("gltf-model", "./assets/models/book3.gltf");
     model.setAttribute("animation-mixer", { timeScale: 0 });
     model.setAttribute("scale", "3 3 3");
-    model.setAttribute("position", { x: 0, y: 30, z: 0 });
+    model.setAttribute("position", { x: 0, y: 0, z: 30 });
     model.setAttribute("look-at", "[camera]");
     // model.setAttribute("link", `href:https://www.libra.titech.ac.jp/`);
 
