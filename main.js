@@ -23,8 +23,8 @@ function staticLoadPlaces() {
     {
       name: "book",
       location: {
-        lat: 35.60643705756204,
-        lng: 139.68400470174458,
+        lat: 35.60648775953516,
+        lng: 139.68400134898337,
       },
     },
   ];
@@ -44,8 +44,8 @@ function renderPlaces(places) {
     );
     model.setAttribute("gltf-model", "./assets/models/book3.gltf");
     model.setAttribute("animation-mixer", { timeScale: 0 });
-    model.setAttribute("scale", "3 3 3");
-    model.setAttribute("position", "0 20 0");
+    model.setAttribute("scale", "2 2 2");
+    model.setAttribute("position", "0 0 20");
     model.setAttribute("look-at", "[camera]");
     // model.setAttribute("link", `href:https://www.libra.titech.ac.jp/`);
 
