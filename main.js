@@ -46,11 +46,14 @@ function renderPlaces(places) {
     model.setAttribute("rotation", "0 180 0");
     model.setAttribute("animation-mixer", { timeScale: 0 });
     model.setAttribute("scale", "1 1 1");
-    model.setAttribute("link", `href:https://www.libra.titech.ac.jp/`);
+    // model.setAttribute("link", `href:https://www.libra.titech.ac.jp/`);
 
     model.addEventListener("click", (e) => {
       if (!running) {
         model.setAttribute("animation-mixer", { timeScale: 1 });
+        setTimeout(() => {
+          document.getElementById("booklink").click();
+        }, 3000);
       } else {
         model.setAttribute("animation-mixer", { timeScale: 0 });
       }
