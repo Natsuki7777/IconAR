@@ -3,13 +3,28 @@ window.onload = () => {
   renderPlaces(places);
 };
 
+AFRAME.registerComponent("anim-controller", {
+  init: function () {
+    this.running = false;
+    this.animComp = document.querySelector("a-animation");
+    this.el.addEventListener("click", (e) => {
+      if (!this.running) {
+        this.animComp.emit("start");
+      } else {
+        this.animComp.emit("stop");
+      }
+      this.running = !this.running;
+    });
+  },
+});
+
 function staticLoadPlaces() {
   return [
     {
       name: "book",
       location: {
-        lat: 35.60633707654948,
-        lng: 139.68401897448007,
+        lat: 35.606256862309124,
+        lng: 139.68403883325144,
       },
     },
   ];
@@ -29,10 +44,18 @@ function renderPlaces(places) {
     );
     model.setAttribute("gltf-model", "./assets/models/book3.gltf");
     model.setAttribute("rotation", "0 180 0");
-    model.setAttribute("animation-mixer", "");
+    model.setAttribute("animation-mixer", { timeScale: 0 });
     model.setAttribute("scale", "1 1 1");
     model.setAttribute("link", `href:https://www.libra.titech.ac.jp/`);
 
+    model.addEventListener("click", (e) => {
+      if (!this.running) {
+        model.setAttribute("animation-mixer", { timeScale: 1 });
+      } else {
+        model.setAttribute("animation-mixer", { timeScale: 1 });
+      }
+      this.running = !this.running; // flip the flag
+    });
     model.addEventListener("loaded", () => {
       window.dispatchEvent(new CustomEvent("gps-entity-place-loaded"));
     });
