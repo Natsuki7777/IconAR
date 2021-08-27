@@ -55,7 +55,7 @@ function renderPlaces(places) {
         model.setAttribute("animation-mixer", { timeScale: 1 });
         setTimeout(() => {
           document.getElementById("booklink").click();
-        }, 3000);
+        }, 2000);
       } else {
         model.setAttribute("animation-mixer", { timeScale: 0 });
       }
