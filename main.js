@@ -46,6 +46,8 @@ function renderPlaces(places) {
     model.setAttribute("rotation", "0 180 0");
     model.setAttribute("animation-mixer", { timeScale: 0 });
     model.setAttribute("scale", "1 1 1");
+    model.setAttribute("position", { x: 0, y: 15.0, z: 0 });
+    model.setAttribute("look-at", "[camera]");
     // model.setAttribute("link", `href:https://www.libra.titech.ac.jp/`);
 
     model.addEventListener("click", (e) => {
