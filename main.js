@@ -45,7 +45,7 @@ function renderPlaces(places) {
     model.setAttribute("gltf-model", "./assets/models/book3.gltf");
     model.setAttribute("animation-mixer", { timeScale: 0 });
     model.setAttribute("scale", "2 2 2");
-    model.setAttribute("position", "0 0 20");
+    model.setAttribute("position", "0 20 0");
     model.setAttribute("look-at", "[camera]");
     // model.setAttribute("link", `href:https://www.libra.titech.ac.jp/`);
 
@@ -54,7 +54,7 @@ function renderPlaces(places) {
         model.setAttribute("animation-mixer", { timeScale: 1 });
         setTimeout(() => {
           document.getElementById("booklink").click();
-        }, 1500);
+        }, 1000);
       } else {
         model.setAttribute("animation-mixer", { timeScale: 0 });
       }
